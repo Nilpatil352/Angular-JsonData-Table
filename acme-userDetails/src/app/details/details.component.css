@@ -1,0 +1,55 @@
+.card {
+    margin-top: 8px;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+    padding: 12px;
+}
+
+h2 {
+    margin: 0 0 12px 0;
+    font-size: 16px;
+}
+
+.kv {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 13px;
+}
+
+.kv th,
+.kv td {
+    text-align: left;
+    vertical-align: top;
+    padding: 6px;
+    border-bottom: 1px solid #eee;
+}
+
+.kv th {
+    width: 220px;
+    color: #444;
+}
+
+pre {
+    margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono",
+        monospace;
+}
+
+.muted {
+    color: #666;
+    font-size: 13px;
+}
+
+a {
+    color: #0b5ed7;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+.kv tr:hover {
+  background-color: #f9f9f9;
+}

@@ -1,0 +1,23 @@
+<a routerLink="/list">← Back to list</a>
+
+<section *ngIf="item" class="card">
+   <h2>User Details (row {{ index +1 }})</h2> <!-- JSON rows are zero-indexed; adding 1 makes display user-friendly (starts from 1 instead of 0). -->
+  <table class="kv">
+    <tbody>
+      <tr *ngFor="let k of keys(item)">
+        <th>{{ k }}</th>
+        <td>
+          <ng-container *ngIf="isObject(item[k]); then objTmpl; else plainTmpl"></ng-container>
+          <ng-template #objTmpl>
+            <pre>{{ item[k] | json }}</pre>
+          </ng-template>
+          <ng-template #plainTmpl>
+            {{ item[k] }}
+          </ng-template>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<p *ngIf="!item" class="muted">Loading…</p>

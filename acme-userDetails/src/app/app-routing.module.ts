@@ -6,6 +6,7 @@ import { DetailsComponent } from './details/details.component';
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'list' },
   { path: 'list', component: TableComponent },
+  { path: 'details/:index', component: DetailsComponent },
   { path: '**', redirectTo: 'list' }
 ];
 
