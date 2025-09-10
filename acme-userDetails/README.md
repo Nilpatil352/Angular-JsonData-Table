@@ -8,18 +8,19 @@ A simple Angular 14 application that demonstrates:
 - Minimal, clean styling without heavy UI frameworks
 
 ---
-# Additional Notes
+## Additional Notes
 
--Serial Number Column
-    A static Sr.No column is added to the table.
-    Each row shows i + 1 (where i is the zero-based index), ensuring numbering starts from 1 instead of 0.
--Row Index in Details View
-    Since JSON data uses zero-based indices, displaying row numbers directly would show "Row 0".
-    To make this user-friendly, the index is incremented by 1 in the template.
+- **Serial Number Column**:  
+  A static "Sr.No." column is added to the table. Each row shows `i + 1` (where `i` is the zero-based index), ensuring numbering starts from 1 instead of 0.
+
+- **Row Index in Details View**:  
+  Since JSON data uses zero-based indices, displaying row numbers directly would show "Row 0".  
+  To make this user-friendly, the index is incremented by 1 in the template.
+
     
 ---
 
-## Features of App
+### Features of App
 
 - **Dynamic headers**: The table adapts to the structure of the data.
 - **Inline editing**: Edit values directly inside the table; updates are kept in memory.
@@ -34,19 +35,14 @@ A simple Angular 14 application that demonstrates:
 - Angular CLI v14 (or compatible)
 
 ---
-
 ## Setup
 
-### 1. Clone the repo
+Run the following commands to clone the repo, install dependencies, and start the app:
+
 ```cmd
 git clone https://github.com/Nilpatil352/Angular-JsonData-Table.git
 cd Angular-JsonData-Table
-
-### 2. Install Dependencies
-```cmd
 cd acme-userDetails
 npm install
-
-### 3. To run App
-```cmd
 ng serve -o
+ 
