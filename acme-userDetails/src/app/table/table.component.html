@@ -1,0 +1,44 @@
+<section>
+  <div class="toolbar">
+    <span *ngIf="loading">Loading…</span>
+    <span *ngIf="!loading">Rows: {{ rows.length }}</span>
+  </div>
+
+  <div class="scroll">
+    <table *ngIf="rows.length" class="grid">
+      <thead>
+        <tr>
+          <!-- Extra static Sr.No column added which is not coming from JSON source -->
+          <th class="w-sno">Sr.No</th>
+          <th *ngFor="let col of columns">{{ col }}</th>
+          <th class="w-actions">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let row of rows; let i = index; trackBy: trackRow"
+            (click)="openDetails(i)">
+          <td class="w-sno">{{ i + 1 }}</td>
+          <td *ngFor="let col of columns">
+            <ng-container *ngIf="editingIndex === i; else readCell">
+              <input class="cell-input"
+                     [value]="row[col]"
+                     (click)="$event.stopPropagation()"
+                     (change)="onCellChange(i, col, $event)">
+            </ng-container>
+            <ng-template #readCell>
+              <span class="truncate" [title]="row[col]">{{ row[col] }}</span>
+            </ng-template>
+          </td>
+
+          <td class="w-actions" (click)="$event.stopPropagation()">
+            <button *ngIf="editingIndex !== i" (click)="startEdit(i, $event)">Edit</button>
+            <button *ngIf="editingIndex === i" (click)="cancelEdit($event)">Done</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p *ngIf="!loading && !rows.length" class="muted">No data.</p>
+  </div>
+</section>

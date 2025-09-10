@@ -1,0 +1,76 @@
+.toolbar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.scroll {
+    overflow: auto;
+    border: 1px solid #e5e5e5;
+    border-radius: 6px;
+}
+
+.grid {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+th,
+td {
+    padding: 8px;
+    border-bottom: 1px solid #eee;
+    vertical-align: top;
+}
+
+thead th {
+    position: sticky;
+    top: 0;
+    background: #fafafa;
+    text-align: left;
+    font-weight: 600;
+}
+
+tr:hover {
+    background: #fcfcfc;
+    cursor: pointer;
+}
+
+button {
+    padding: 4px 8px;
+    font-size: 12px;
+    border: 1px solid #d0d0d0;
+    background: #fff;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #f3f3f3;
+}
+
+.cell-input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 4px 6px;
+    font-size: 13px;
+}
+
+.truncate {
+    display: inline-block;
+    max-width: 260px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.w-actions {
+    width: 96px;
+}
+
+.w-sno { 
+  width: 64px; 
+  text-align: left; 
+  padding-left: 8px; 
+}
